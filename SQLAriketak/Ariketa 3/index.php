@@ -10,11 +10,11 @@ if ($conn->connect_error) {
     die("Errorea datu basearekin konektatzerakoan: " . $conn->connect_error);
 }
 
-$informazioa = []; // Array para guardar los datos enviados y mostrarlos después
-$formulario_bidalita = false; // Variable para saber si se envió el formulario
+$informazioa = []; 
+$formulario_bidalita = false; 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $formulario_bidalita = true; // Marcamos que se ha enviado el formulario
+    $formulario_bidalita = true; 
 
     $mota = $_POST['mota'] ?? '';
     $zonaldea = $_POST['zonaldea'] ?? '';
